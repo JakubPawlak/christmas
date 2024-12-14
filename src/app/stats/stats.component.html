@@ -1,0 +1,27 @@
+<h1>Produkcja: {{ environment.production }}</h1>
+<p>Grzeczne dzieci: {{ listService.getUsers().size }}</p>
+<p>Ile osób już wylosowało: {{ usersThatDrawnCount }}</p>
+<p>
+  Ilość osób, które nie zostały jeszcze wylosowane:
+  {{ usersThatAreNotDrawnCount }}
+</p>
+<h2>
+  <b>Niepuste duplikaty: {{ duplicates() }}</b>
+</h2>
+
+<div>
+  <br />
+  <h2>Zresetuj</h2>
+  <form [formGroup]="adminForm">
+    <label>Hasło:</label>
+    <input type="password" formControlName="user" />
+    <button [disabled]="adminForm.invalid" (click)="resetFirestore()">
+      dodaj osoby i przywróć domyślny stan losów
+    </button>
+  </form>
+
+  <br />
+  <button [disabled]="adminForm.invalid" (click)="purgeFirestore()">
+    usuń liste osob
+  </button>
+</div>

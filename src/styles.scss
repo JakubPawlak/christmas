@@ -1,0 +1,246 @@
+/* You can add global styles to this file, and also import other style files */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-family: "Montserrat", sans-serif;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote {
+  &:before,
+  &:after {
+    content: "";
+    content: none;
+  }
+}
+
+q {
+  &:before,
+  &:after {
+    content: "";
+    content: none;
+  }
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html,
+body {
+  height: 100vh;
+}
+
+body {
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  height: 100%;
+  background-image: url("./assets/annie-spratt-smaller-min.jpeg");
+  background-size: cover;
+  background-position: center;
+  min-height: 480px;
+}
+
+.content {
+  margin: auto 4rem auto 4rem;
+}
+
+.row {
+  flex-direction: row;
+  margin-bottom: 2rem;
+}
+
+h1 {
+  font-size: 1.75rem;
+  font-weight: 200;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.input,
+.btn {
+  width: 180px;
+  height: 36px;
+  border-width: 1px;
+  border-color: #393020;
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: center;
+  margin: 0 0.5rem 0.5rem 0.5rem;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.input {
+  background-color: transparent;
+}
+
+.btn-primary {
+  background-color: #393020;
+  color: rgba(255, 255, 255, 0.87);
+  &:hover {
+    background-color: darken(#393020, 4%);
+  }
+}
+
+.loader {
+  margin-top: 1rem;
+  text-align: center;
+  border: 2px solid #f3f3f3; /* Light grey */
+  border-top: 2px solid #393020; /* Blue */
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: spin 2s linear infinite;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.draw {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  &:first-letter {
+    text-transform: capitalize;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .input,
+  .btn {
+    width: 180px;
+    height: 40px;
+  }
+}

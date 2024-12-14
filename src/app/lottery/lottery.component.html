@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="content">
+    <h1>Zostań świętym Mikołajem</h1>
+    <ng-container [ngSwitch]="!!drawn">
+      <div *ngSwitchCase="true">
+        <p>Twój świąteczny los to:</p>
+        <ng-container *ngIf="isLoaded; else loader">
+          <p data-testid="drawName" class="draw">{{ drawn }}</p>
+        </ng-container>
+      </div>
+      <div class="row" *ngSwitchDefault>
+        <input
+          placeholder="Wpisz swoje imię"
+          class="input"
+          [(ngModel)]="userName"
+          (keyup.enter)="submit()"
+        />
+        <button class="btn btn-primary" (click)="submit()">Losuj</button>
+      </div>
+    </ng-container>
+  </div>
+</div>
+
+<ng-template #loader>
+  <div class="loader"></div>
+</ng-template>
